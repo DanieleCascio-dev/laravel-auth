@@ -13,7 +13,7 @@ class Project extends Model
 
     public function setTitleAttribute($value)
     {
-        $this->attribute['title']=$value;
-        $this->attribute['slug']=Str::slug($value);
+        $this->attributes["title"] = $value;
+        $this->attributes["slug"]=Str::slug($value);
     }
 }
