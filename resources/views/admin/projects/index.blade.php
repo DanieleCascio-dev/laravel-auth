@@ -6,6 +6,10 @@
   <h2>Welcome to the admin area!</h2>
   <h3>Here you can find all the projects</h3>
 
+  <div class="text-end py-2">
+    <a class="btn btn-success " href="{{ route('admin.projects.create')}}">Add a new project</a>
+  </div>
+
   <table class="table table-dark table-striped">
     <thead>
       <tr>
@@ -24,7 +28,7 @@
         <td>{{ $project->description }}</td>
         <td>{{ $project->slug }}</td>
         <td>{{ $project->created_at }}</td>
-        <td></td>
+        <td> <a class="btn btn-success" href="{{ route('admin.projects.show',['project'=> $project->slug ])}}">Details</a></td>
       </tr>
 
         @endforeach

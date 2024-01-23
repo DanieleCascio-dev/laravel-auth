@@ -18,7 +18,7 @@ class ProjectTableSeeder extends Seeder
             
             $project = new Project();
             $project->title = $faker->sentence(rand(2,$i + 3));
-            $project->description = $faker->paragraph(rand(1,$i + 2));
+            $project->description = $faker->paragraph(rand(3,$i + 4));
             $project->save();
 
         }
