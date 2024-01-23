@@ -10,6 +10,7 @@ class Project extends Model
 {
     use HasFactory;
     
+    public $fillable = ['title','description'];
 
     public function setTitleAttribute($value)
     {
