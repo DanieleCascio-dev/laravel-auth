@@ -75,8 +75,9 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($slug)
     {
-        //
+        $project = Project::where('slug',$slug)->first();
+        dd($project);
     }
 }

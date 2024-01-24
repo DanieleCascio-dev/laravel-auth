@@ -21,7 +21,7 @@ class UpdateProjectRequest extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
-    {
+    {                                                       // Rule::unique('projects')->ignore($this->project)
         return [
             'title'=> ['required', 'max:250', 'min:4', Rule::unique('projects')->ignore($this->project)],
             'description' => ['max:5000']
