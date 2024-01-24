@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -62,7 +63,7 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(StoreProjectRequest $request, $slug)
+    public function update(UpdateProjectRequest $request, $slug)
     {
         $project_to_update = $request->validated();
         $project = Project::where('slug',$slug)->first();
