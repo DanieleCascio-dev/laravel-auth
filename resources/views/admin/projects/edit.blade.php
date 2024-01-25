@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="conatiner">
+    <a href="{{ url()->previous() }}">Go back</a>
     <h2>Welcome to the Edit section!</h2>
 
     @if ($errors->any())
